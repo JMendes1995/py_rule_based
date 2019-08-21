@@ -40,7 +40,7 @@ The output will be a list of 3 elements or an empty list [] if no temporal expre
 
 - a list of tuples with two positions (e.g., ('2011-01-02', '2011-01-02')). The first one is the detected temporal expression normalized by py_rule_based model. The second is the temporal expression as it was found in the text; The first may differ from the second when the date_granularity is different than "full".
 - a normalized version of the text, where each temporal expression is tagged with d;
-- the execution time of the algorithm, divided into `rule_based_processing` (i.e., the time spent by the rule_based model in extracting temporal expressions) and `text_normalization` (the time spent by the program in labelling the temporal expressions found in the text with a tag <d>).
+- the execution time of the algorithm, divided into `rule_based_processing` (i.e., the time spent by the rule_based model in extracting temporal expressions) and `text_normalization` (the time spent by the program in labelling the temporal expressions found in the text with a tag d).
 
 ```` bash
 TempExpressions = results[0]
@@ -67,13 +67,13 @@ ExecutionTime
 ````
 
 #### _Optional parameters_
-Besides running py_rule_based with the default parameters, users can also specify more advanced options. These are:
-- `date granularity`: <b>"full"</b> (highest possible granularity detected will be retrieved); <b>"year"</b> (YYYY will be retrieved); <b>"month"</b> (YYYY-MM will be retrieved); <b>"day"</b> (YYYY-MM-DD will be retrieved)
-- `begin_date` <b>0</b> (defines the minimum value of date to be considered)
-- `end_date` <b>2100</b> (Defines the maximum value of date to be considered)
+Besides running py_rule_based with the default parameters, users can also specify some advanced options. These are:
+- `date granularity`: <b>"full"</b> (highest possible granularity detected will be retrieved); <b>"year"</b> (YYYY will be retrieved); <b>"month"</b> (YYYY-MM will be retrieved); <b>"day"</b> (YYYY-MM-DD will be retrieved);
+- `begin_date`: an integer (default is 0) that defines the lowest date beginning of the time period to consider;
+- `end_date`: an integer (default is 2100) that defines the end of the time period to consider
 
 ```` bash
-result = py_rule_based(text, date_granularity='year', begin_date=0, end_date=2100)
+result = py_rule_based(text, date_granularity='year', begin_date=1930, end_date=1935)
 ````
 
 ###### Output
@@ -85,7 +85,7 @@ TempExpressions = results[0]
 TempExpressions
 ````
 ```` bash
-[('1939', '1939'), ('1937', '1937'), ('1931', '19-09-1931')]
+[('1931', '19-09-1931')]
 ````
 
 ```` bash
@@ -93,7 +93,7 @@ TextNormalized = results[1]
 TextNormalized
 ````
 ```` bash
-'The start of the war in Europe is generally held to be 1 September <d>1939</d>,beginning with the German invasion of Poland; the United Kingdom and France declared war on Germany two days later.The dates for the beginning of war in the Pacific include the start of the Second Sino-Japanese War on 7 July <d>1937</d>,or even the Japanese invasion of Manchuria on <d>1931</d>.'
+'The start of the war in Europe is generally held to be 1 September 1939,beginning with the German invasion of Poland; the United Kingdom and France declared war on Germany two days later.The dates for the beginning of war in the Pacific include the start of the Second Sino-Japanese War on 7 July 1937,or even the Japanese invasion of Manchuria on <d>1931</d>.'
 ````
 
 ```` bash
@@ -149,7 +149,7 @@ py_rule_based -t "2011 Haiti Earthquake Anniversary." -dg "year" -bd "2000" -ed 
                                         Options:
                                                 any integer > 0
                                             
-  -ed, --end_date TEXT                  begin date.
+  -ed, --end_date TEXT                  end date.
                                         Options:
                                                 any integer > 0
                                                 
