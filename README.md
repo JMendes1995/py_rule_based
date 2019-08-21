@@ -1,7 +1,7 @@
 
 
 # py_rule_based
-py_rule_based is a python wrapper that use a self-defined rule-based approach in regex which is able to detect the following patterns:
+py_rule_based is a self-defined rule-based approach in regex which is able to detect the following patterns:
 
    - yyyy(./-)mm(./-)dd
    - dd(./-)mm(./-)yyyy
@@ -9,7 +9,7 @@ py_rule_based is a python wrapper that use a self-defined rule-based approach in
    - yyyys
    - yyyy
 
-This wrapper has been developed by Jorge Mendes under the supervision of [Professor Ricardo Campos](http://www.ccc.ipt.pt/~ricardo/) in the scope of the Final Project of the Computer Science degree at the [Polytechnic Institute of Tomar](http://portal2.ipt.pt/), Portugal.
+It has been developed by Jorge Mendes under the supervision of [Professor Ricardo Campos](http://www.ccc.ipt.pt/~ricardo/) in the scope of the Final Project of the Computer Science degree at the [Polytechnic Institute of Tomar](http://portal2.ipt.pt/), Portugal.
 
 ## How to install py_rule_based
 
