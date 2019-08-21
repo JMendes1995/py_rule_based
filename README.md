@@ -32,20 +32,14 @@ Default date_granularity is "full" (highest possible granularity detected will b
 
 ```` bash
 results = py_rule_based(text)
-````
-
-or:
-
-```` bash
 results = py_rule_based(text, date_granularity='full', begin_date=2000, end_date=2100)
 ````
-is exactly the same thing and produces the same results.
 
 ###### Output
 The output will be a list of 3 elements or an empty list [] if no temporal expression is found in the text. The three elements are:
 
-- a list of tuples with two positions (e.g., ('2011-01-02', '2011-01-02')). The first one is the detected temporal expression normalized by py_rule_based model. The second is the temporal expression as it was found in the text; The first may differ from the second when the date_granularity is different than full.
-- a normalized version of the text, where each temporal expression is tagged with <d>;
+- a list of tuples with two positions (e.g., ('2011-01-02', '2011-01-02')). The first one is the detected temporal expression normalized by py_rule_based model. The second is the temporal expression as it was found in the text; The first may differ from the second when the date_granularity is different than "full".
+- a normalized version of the text, where each temporal expression is tagged with d;
 - the execution time of the algorithm, divided into `rule_based_processing` (i.e., the time spent by the rule_based model in extracting temporal expressions) and `text_normalization` (the time spent by the program in labelling the temporal expressions found in the text with a tag <d>).
 
 ```` bash
