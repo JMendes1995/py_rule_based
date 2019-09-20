@@ -11,6 +11,9 @@ py_rule_based is a self-defined rule-based approach in regex which is able to de
 
 It has been developed by Jorge Mendes under the supervision of [Professor Ricardo Campos](http://www.ccc.ipt.pt/~ricardo/) in the scope of the Final Project of the Computer Science degree at the [Polytechnic Institute of Tomar](http://portal2.ipt.pt/), Portugal.
 
+### Where can I find py_rule_based?
+https://github.com/JMendes1995/py_rule_based
+
 ## How to install py_rule_based
 
 ```bash
@@ -158,7 +161,7 @@ py_rule_based -t "2011 Haiti Earthquake Anniversary." -dg "year" -bd "2000" -ed 
 ```
 
 ## Python Notebook 
-We highly recommend you to use this [python notebook](notebook-py-rule-based.ipynb) if you are interested in playing with py_rule_based
+We highly recommend you to use this [python notebook](notebook-py-rule-based.ipynb) if you are interested in playing with py_rule_based.
 
 ## Related Projects
 Please check [py_heideltime](https://github.com/JMendes1995/py_heideltime) if you are interested in extracting temporal expressions using Heideltime Temporal Tagger.
