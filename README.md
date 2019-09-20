@@ -157,4 +157,10 @@ py_rule_based -t "2011 Haiti Earthquake Anniversary." -dg "year" -bd "2000" -ed 
 
 ```
 
+## Python Notebook 
+We highly recommend you to use this [python notebook](notebook-py-rule-based) if you are interested in playing with py_rule_based
+
+## Related Projects
+Please check [py_heideltime](https://github.com/JMendes1995/py_heideltime) if you are interested in extracting temporal expressions using Heideltime Temporal Tagger.
+
 Please check [Time-Matters](https://github.com/LIAAD/Time-Matters) if you are interested in detecting the relevance (score) of dates in a text.
