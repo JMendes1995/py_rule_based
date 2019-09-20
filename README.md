@@ -104,7 +104,7 @@ ExecutionTime
 {'rule_based_processing': 0.0, 'rule_based_text_normalization': 0.0}
 ````
 
-### Python CLI (Command Line Interface)
+### Python_CLI
 #### Help
 ``` bash
 py_rule_based --help
